@@ -1,6 +1,5 @@
 import styles from './layout.module.css'
 import Head from 'next/head'
-import Link from 'next/link'
 
 export default function Layout({ children, home }) {
   return (
@@ -11,17 +10,17 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {!home && (
           <>
-            <Link href="/"><a>Home</a></Link>         
-            <Link href="/posts/first-post"><a>Post</a></Link>         
+            <a href="/">Home</a>         
+            <a href="/posts/first-post">Post</a>         
           </>
         )}
       </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <a href="/">
+            ← Back to home
+          </a>
         </div>
       )}      
     </div>
