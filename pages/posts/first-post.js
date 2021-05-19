@@ -14,7 +14,8 @@ function FirstPost({ user }) {
 }
 
 FirstPost.getInitialProps = async () => {
-  const res = await fetch('http://localhost:3000/api/user')
+  const api = process.env.API
+  const res = await fetch(`${api}/user`)
   const user = await res.json()
   return { user }
 }
