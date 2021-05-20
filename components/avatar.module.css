@@ -1,0 +1,9 @@
+.avatar {
+  float: left;
+  border-radius: 2rem;
+  height: 32px;
+  width: 32px;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
